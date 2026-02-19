@@ -1,0 +1,64 @@
+body{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+#counter-value{
+    font-weight: bold;
+    font-size: 62px;
+}
+
+.btn{
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#increase-button{
+    background-color: green;
+}
+
+#increase-button:hover{
+    background-color: darkgreen;
+}
+
+#decrease-button{
+    background-color: red;
+}
+
+#decrease-button:hover{
+    background-color: darkred;
+}
+
+#rest-button{
+    background-color: darkgray;
+}
+#rest-button:hover{
+    background-color: gray;
+}
+
+
+.positive{
+    color: green;
+}
+.negative{
+    color: red;
+}
+.zero{
+    color: black;
+}
+
+
+
+
+
+
+
+
+

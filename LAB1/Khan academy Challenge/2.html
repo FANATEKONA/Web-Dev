@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevConnect Conference 2026</title>
+    <style>
+        /* --- 9. ГЛОБАЛЬНЫЕ ТРЕБОВАНИЯ --- */
+        :root {
+            --primary-color: #3498db; /* CSS переменные */
+            --dark-bg: #2c3e50;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box; /* */
+        }
+
+        body {
+            margin: 0; padding: 0; /* Сброс отступов */
+            font-family: 'Segoe UI', Arial, sans-serif; /* Чистый шрифт */
+            line-height: 1.6;
+        }
+
+        .section {
+            padding: 80px 20px; /* Консистентные отступы */
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--dark-bg);
+            border-bottom: 4px solid var(--primary-color); /* Стилизация h2 */
+            display: inline-block;
+            margin-bottom: 50px;
+        }
+
+        img {
+            max-width: 100%; /* Респонсивность */
+            height: auto;
+        }
+
+        /* Навигация (Bonus) */
+        nav {
+            position: fixed; top: 0; width: 100%; /* Sticky nav */
+            background: var(--dark-bg);
+            padding: 15px; z-index: 1000;
+        }
+        nav a {
+            color: var(--white); text-decoration: none; margin: 0 15px;
+            font-weight: bold; transition: color 0.3s; /* Transition */
+        }
+        nav a:hover { color: var(--primary-color); }
+
+        /* Кнопки */
+        .btn-primary {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .btn-primary:hover { transform: scale(1.05); }
+
+        /* --- 3. ABOUT SECTION --- */
+        #about { background-color: var(--light-bg); }
+        #about ul { 
+            list-style-type: square; /* Custom markers */
+            display: inline-block; text-align: left; 
+        }
+        #about li { margin-bottom: 15px; } /* Свободное пространство */
+        #about li::marker { color: var(--primary-color); }
+
+        /* --- 4. SPEAKERS SECTION --- */
+        .speaker-card {
+            display: inline-block; vertical-align: top;
+            width: 23%; margin: 1%; padding: 20px; /* */
+            border: 1px solid #ddd; border-radius: 10px;
+            transition: box-shadow 0.3s, transform 0.3s; /* Анимация */
+        }
+        .speaker-card:hover { 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); 
+            transform: translateY(-5px); 
+        }
+        .speaker-card img { border-radius: 50%; } /* Circular images */
+        .speaker-title { font-style: italic; color: #777; } /* */
+
+        /* --- 5. SCHEDULE SECTION --- */
+        .day-schedule {
+            display: inline-block; width: 31%; margin: 1%; vertical-align: top;
+        }
+        .day-schedule h3 { background: var(--dark-bg); color: var(--white); padding: 10px; margin: 0; }
+        table { width: 100%; border-collapse: collapse; } /* */
+        th, td { border: 1px solid #ddd; padding: 12px; }
+        tr:nth-child(even) { background-color: #f2f2f2; } /* Zebra */
+        td:first-child { font-weight: bold; } /* */
+
+        /* --- 6. PRICING SECTION --- */
+        .price-card {
+            display: inline-block; width: 30%; margin: 1%; padding: 30px;
+            border: 1px solid #ddd; border-radius: 15px;
+        }
+        .price-card.featured { 
+            border: 2px solid var(--primary-color);
+            transform: scale(1.08); /* Больше остальных */
+            background: #eef7ff;
+        }
+        .price { font-size: 2.5rem; font-weight: bold; color: var(--primary-color); }
+        .price-card ul { list-style: none; padding: 0; text-align: left; }
+        .price-card li::before { content: "✔ "; color: green; font-weight: bold; } /* */
+
+        /* --- 7. CONTACT SECTION --- */
+        #contact { background-color: var(--dark-bg); color: var(--white); }
+        #contact a { color: var(--primary-color); text-decoration: none; }
+        .social-links { margin-top: 30px; }
+        .social-item { 
+            display: inline-block; margin: 0 10px; 
+            padding: 10px 20px; border: 1px solid var(--primary-color);
+            border-radius: 25px; transition: 0.3s;
+        }
+        .social-item:hover { background: var(--primary-color); color: var(--white); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="section">
+        <h2>About The Conference</h2>
+        <p>Узнайте о будущем веб-разработки на нашей ежегодной конференции.</p>
+        <ul>
+            <li>50+ Technical Sessions</li>
+            <li>Hands-on Workshops</li>
+            <li>Networking Events</li>
+            <li>Career Fair</li>
+        </ul>
+    </section>
+
+    <section id="speakers" class="section">
+        <h2>Featured Speakers</h2>
+        <div class="speaker-card">
+            <img src="https://via.placeholder.com/150" alt="Sarah">
+            <h3>Dr. Sarah Chen</h3>
+            <p class="speaker-title">AI Research Lead at TechGiant</p>
+            <p>Лидер в области ИИ и нейронных сетей.</p>
+        </div>
+        </section>
+
+    <section id="schedule" class="section">
+        <h2>Event Schedule</h2>
+        <div class="day-schedule">
+            <h3>Day 1 - March 15</h3>
+            <table>
+                <tr><td>09:00</td><td>Registration</td></tr>
+                <tr><td>10:00</td><td>Opening Keynote</td></tr>
+            </table>
+        </div>
+        </section>
+
+    <section id="pricing" class="section">
+        <h2>Registration Pricing</h2>
+        <div class="price-card featured">
+            <h3>Standard</h3>
+            <p class="price">$299</p>
+            <ul>
+                <li>All Sessions</li>
+                <li>Lunch</li>
+                <li>Workshop Access</li>
+            </ul>
+            <a href="#" class="btn-primary">Select Plan</a>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Get In Touch</h2>
+        <p>Email: <a href="mailto:conference@devconnect.kz">conference@devconnect.kz</a></p>
+        <div class="social-links">
+            <a href="#" class="social-item">LinkedIn</a>
+            <a href="#" class="social-item">Twitter</a>
+        </div>
+        <p style="margin-top: 50px;"><a href="#">Scroll to top</a></p>
+    </section>
+
+</body>
+</html>

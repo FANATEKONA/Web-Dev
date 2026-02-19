@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FitZone — Your Fitness Journey Starts Here</title>
+  <style>
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #808080;
+      }
+      #header{
+        background-color: rgba(0, 0, 0, 0.68);
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .link{
+        text-decoration: none;
+      }
+      .link:hover{
+        color: #FFFFFF;
+      }
+      #hero{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column-gap: 10px;
+      }
+      #name{
+        width: 300px;
+        display: flex;
+        flex-direction: column; grid-column-gap: 10px;
+      }
+      #email{
+        display: flex;
+        width: 300px;
+        flex-direction: column; grid-column-gap: 10px;
+      }
+      .btn{
+        font-weight: bold;
+        background-color: #e94560;
+        border-radius: 10px;
+        color: white;
+        padding: 10px;
+        margin:15px;
+        border: none;
+        width:150px;
+      }
+      .btn:hover{
+        background-color: #ff002b;
+      }
+
+      #classes{
+        margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:20px;
+        justify-items: center;
+      }
+      .class-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        box-shadow: #1f2328 2px 4px 2px 4px;
+        background-color: #2f363d;
+      }
+      .class-card:hover{
+        background-color: #141a1e;
+        box-shadow: #4a7dff 2px 4px 2px 4px;
+      }
+      .class-level-beg{
+        color: green;
+      }
+      .class-level-Int{
+        color: orange;
+      }
+      .class-level-adv{
+        color: red;
+      }
+
+      .pricing{margin-top: 10px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap:20px;
+        justify-items: center;
+      }
+      .plan-card{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        border-radius: 5px;
+        border: 1px solid black;
+      }
+
+      .price{
+        font-weight: bold;
+        font-size:large;
+      }
+      
+      .btn
+      
+  </style>
+</head>
+<body>
+<header id="header">
+      <h1 class="gym-name-logo" >
+        FitZone
+      </h1>
+  <nav class="gym-navbar">
+
+    <ul class="gym-navbar-links">
+      <li>
+         <a href="#" class="link">Home</a>
+      </li>
+      <li>
+        <a href="#" class="link">Classes</a>
+      </li>
+      <li>
+        <a href="#" class="link">Trainers</a>
+      </li>
+      <li>
+        <a href="#" class="link">Membership</a>
+      </li>
+      <li>
+        <a href="#" class="link">Contact</a>
+      </li> 
+    </ul>
+  </nav>
+</header>
+<main>
+  <section id="hero">
+  <header id="hero-header">  
+    <h3 class="hero-header-h3"> Transform Your Body, Transform Your Life </h3>
+  </header>
+    <p>
+      HEKOQDPLASD'LAS? <BR>
+      ADS;L;D'W?
+    </p>
+    <form action="#" method="POST">
+      <label for="name">Full Name</label>
+      <input type="text" name="fullname" id="name" placeholder="Enter your full name">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Enter your email">
+      <label for="level">Level</label>
+      <select name="level" id="level">
+        <option value="Basic">Basic</option>
+        <option value="Pro">Pro</option>
+        <option value="Elite"> Elite </option>
+      </select>
+      <button type="submit" class="btn"> Join now </button>
+    </form>
+  </section>
+
+  <section id="classes">
+    <div class="class-card">
+      <h3 class="class-name"> Yoga </h3>
+      <p class="class-card-text"> Yoga Classes </p>
+      <span class="class-level"> Beginner </span>
+    </div>
+    <div class="class-card">
+
+      <h3 class="class-name"> Yoga </h3>
+      <p class="class-card-text"> Yoga Classes
+        Mon / Wed / Fri — 7:00 AM
+      </p>
+      <span class="class-level"> Beginner </span>
+    </div>
+    <div class="class-card">
+
+      <h3 class="class-name"> Yoga </h3>
+      <p class="class-card-text"> Yoga Classes
+        Mon / Wed / Fri — 7:00 AM</p>
+      <span class="class-level"> Beginner </span>
+    </div>
+    <div class="class-card">
+
+      <h3 class="class-name"> Yoga </h3>
+      <p class="class-card-text"> Yoga Classes
+        Mon / Wed / Fri — 7:00 AM
+      </p>
+      <span class="class-level-adv"> Advanced </span>
+    </div>
+    <div class="class-card">
+
+      <h3 class="class-name"> Yoga </h3>
+      <p class="class-card-text"> Yoga Classes
+        Mon / Wed / Fri — 7:00 AM
+      </p>
+      <span class="class-level-Int"> Intermediate </span>
+    </div>
+    <div class="class-card">
+
+      <h3 class="class-name"> Yoga </h3>
+      <p class="class-card-text"> Yoga Classes
+        Mon / Wed / Fri — 7:00 AM
+      </p>
+      <span class="class-level-beg"> Beginner </span>
+    </div>
+  </section>
+  
+  <section class="pricing">
+    
+    <div class="plan-card">
+      <h3 class="plan-basic"> 
+        Basic
+      </h3>
+      <p class="price">
+        5,000  ₸/month
+      </p>
+      <ul>
+        <li>
+          Access to gym floor
+        </li>
+        <li>
+          locker room
+        </li>
+      </ul>
+      <button class="btn price-btn"> Choose plan </button>
+    </div>
+    <div class="plan-card">
+      <h3 class="plan-Pro">
+        Pro
+      </h3>
+      <p class="price">
+        9,000  ₸/month
+      </p>
+      <ul>
+        <li>
+          Gym floor
+        </li>
+        <li>
+          All group classes
+        </li>
+        <li>
+          Sauna
+        </li>
+      </ul>
+      <button class="btn price-btn"> Choose plan </button>
+    </div>
+    <div class="plan-card">
+      <h3 class="plan-Pro">
+        Pro
+      </h3>
+      <p class="price">
+        9,000  ₸/month
+      </p>
+      <ul>
+        <li>
+          All Pro benefits
+        </li>
+        <li>
+          Personal trainer
+        </li>
+        <li>
+          Nutrition plan
+        </li>
+      </ul>
+      <button class="btn price-btn"> Choose plan </button>
+    </div>
+  </section>
+</main>
+</body>
+</html>
