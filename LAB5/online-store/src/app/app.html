@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Kaspi Store</h1>
+
+  <div class="categories-nav">
+    @for (cat of categories; track cat.id) {
+      <button
+        (click)="selectCategory(cat)"
+        [class.active]="selectedCategory?.id === cat.id">
+        {{ cat.name }}
+      </button>
+    }
+  </div>
+
+  <hr>
+
+  @if (selectedCategory) {
+    <h2>Category: {{ selectedCategory.name }}</h2>
+
+    <app-product-list [products]="products"></app-product-list>
+
+  } @else {
+    <div class="welcome-msg">
+      <p>Please select a category to see products</p>
+    </div>
+  }
+</div>
