@@ -1,0 +1,17 @@
+<p>
+  Albums works! <br>
+  My name is Elgeldi <br>
+  Course:2
+</p>
+<div class="albums-container">
+  <h2>My Albums</h2>
+  <div *ngFor="let album of albums" class="album-card">
+    <span>{{ album.id }} - {{ album.title }}</span>
+
+    <div class="actions">
+      <a [routerLink]="['/albums', album.id]">Details</a>
+
+      <button (click)="deleteAlbum(album.id)">Delete</button>
+    </div>
+  </div>
+</div>

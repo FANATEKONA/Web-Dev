@@ -1,0 +1,7 @@
+<button [routerLink]="['/albums',photos[0]?.albumId]">Back to Album</button>
+<div class="photos-grid">
+  <div *ngFor="let photo of photos" class="photo-card">
+    <img [src]="'https://picsum.photos/200?random=' + photo.id" [alt]="photo.title">
+    <p>{{photo.title}}</p>
+  </div>
+</div>

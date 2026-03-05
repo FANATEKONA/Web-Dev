@@ -1,0 +1,61 @@
+.photos-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Стили для кнопки "Back to Album" */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Очистка потока после float (Clearfix) */
+.photos-grid::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Сама карточка фотографии */
+.photo-card {
+  float: left;          /* Выстраиваем элементы в ряд */
+  width: 200px;         /* Обязательное свойство для не-картинок при float! */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  text-align: center;
+  box-sizing: border-box; /* Чтобы padding не увеличивал ширину карточки */
+}
+
+/* Стили для самой картинки внутри карточки */
+.photo-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  object-fit: cover;    /* Картинка будет красиво обрезаться, если пропорции не совпадают */
+}
+
+/* Стили для текста под фото */
+.photo-card p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+  /* Следующие 3 строки обрезают слишком длинный текст и добавляют троеточие */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
